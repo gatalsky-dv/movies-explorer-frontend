@@ -4,8 +4,8 @@ export default function AboutProject({ email }) {
 
   return (
     <section className="aboutproject">
-      <h2 className="aboutproject__caption">О проекте</h2>
-      <div className="aboutproject__line"></div>
+      <h2 className="caption">О проекте</h2>
+      <div className="line"></div>
       <ul className="diplom">
         <li className="diplom__cell">
           <h4 className="diplom__caption">Дипломный проект включал 5 этапов</h4>
