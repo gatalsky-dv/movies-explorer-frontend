@@ -1,6 +1,8 @@
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Promo from '../Main/Promo/Promo';
+import AboutMe from '../Main/AboutMe/AboutMe';
+import AboutProject from '../Main/AboutProject/AboutProject';
 
 export default function App() {
 
@@ -10,6 +12,8 @@ export default function App() {
       <div className="app">
         <Header />
         <Promo />
+        <AboutProject />
+        {/* <AboutMe /> */}
         {/* <Switch>
 						<ProtectedRoute
 							exact
