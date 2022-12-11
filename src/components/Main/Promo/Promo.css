@@ -15,7 +15,6 @@
 @media screen and (min-width: 768px) {
   .promo {
     min-height: 784px;
-
   }
 }
 
@@ -31,7 +30,6 @@
 
 @media screen and (min-width: 320px) {
   .promo__img {
-    background-image: url(../../../images/text__landing_210-206.jpg);
     width: 210px;
     height: 206px;
     margin: 70px auto 44px auto;
@@ -41,7 +39,6 @@
 
 @media screen and (min-width: 768px) {
   .promo__img {
-    background-image: url(../../../images/text__landing_310-304.jpg);
     width: 310px;
     height: 304px;
     margin: 140px auto 48px auto;

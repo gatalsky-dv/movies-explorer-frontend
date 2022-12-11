@@ -1,16 +1,16 @@
+import React from 'react';
 
+export default function AboutMe({ email }) {
 
-// export default function AboutMe({ email }) {
-
-//   return (
-//     // <section className="aboutme">
-//     //   <article className="">
-
-//     //   </article>
-//     //   <div className="promo__img"></div>
-//     //   <h1 className="promo__caption">Учебный проект студента факультета Веб-разработки.</h1>
-//     //   <p className="promo__text">Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
-//     //   <button className="promo__more">Узнать больше</button>
-//     // </section>
-//   )
-// }
+  return (
+    <section className="aboutme">
+      <h2 className="caption">Студент</h2>
+      <div className="line"></div>
+      <img src={require('../../../images/ava.jpeg')} alt="Аватарка" className='aboutme_img' />
+      <h3 className="aboutme_name">Дмитрий</h3>
+      <h4 className="aboutme__profession">Фронтенд-разработчик, 36 лет</h4>
+      <p className="aboutme__text">Я живу в Екатеринбурге, закончил радиотехнический факультет УрФУ. У меня есть жена и двое детей. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2020 года работал в компании «Reverse Systems». После того, как прошёл курс по веб-разработке, занимаюсь фриланс-заказами и ушёл с постоянной работы.</p>
+      <h4 className="aboutme__github">Github</h4>
+    </section>
+  )
+}

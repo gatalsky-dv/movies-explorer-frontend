@@ -15,7 +15,7 @@ export default function App() {
         <Promo />
         <AboutProject />
         <Tech />
-        {/* <AboutMe /> */}
+        <AboutMe />
         {/* <Switch>
 						<ProtectedRoute
 							exact

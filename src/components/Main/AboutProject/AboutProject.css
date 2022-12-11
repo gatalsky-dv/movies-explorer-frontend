@@ -79,7 +79,7 @@
 @media screen and (min-width: 1280px) {
   .line {
     min-width: 89.06%;
-    margin: 0 70px 70px 70px;
+    margin: 0 70px 66px 70px;
   }
 }
 
@@ -111,7 +111,7 @@
   .diplom {
     min-width: 89.06%;
     max-height: 90px;
-    margin: 0 70px 110px 70px;
+    margin: 4px 70px 110px 70px;
   }
 }
 
