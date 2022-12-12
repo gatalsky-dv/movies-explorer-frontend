@@ -31,7 +31,6 @@
   .aboutme_img {
     width: 292px;
     height: 352px;
-    /* margin: 0 auto 44px auto; */
     object-fit: cover;
   }
 }
@@ -50,7 +49,7 @@
   .aboutme_img {
     width: 270px;
     height: 327px;
-    margin: 227px 70px auto auto;
+    margin: 227px 70px 0 auto;
   }
 }
 
@@ -136,8 +135,8 @@
 
 @media screen and (min-width: 320px) {
   .aboutme__text {
-    min-width: 364px;
-    min-height: 108px;
+    max-width: 292px;
+    min-height: 112px;
     margin: 20px auto 40px auto;
     font-size: 12px;
     line-height: 18px;
@@ -146,8 +145,8 @@
 
 @media screen and (min-width: 768px) {
   .aboutme__text {
-    max-width: 292px;
-    min-height: 112px;
+    min-width: 364px;
+    min-height: 108px;
     margin: 20px auto 87px 50px;
     font-size: 11px;
     line-height: 16px;

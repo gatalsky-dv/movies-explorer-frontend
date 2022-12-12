@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 320px) {
   .caption {
-    min-width: 284px;
+    min-width: 292px;
     min-height: 22px;
     font-size: 18px;
     line-height: 22px;
@@ -63,7 +63,7 @@
 
 @media screen and (min-width: 320px) {
   .line {
-    min-width: 284px;
+    min-width: 292px;
     min-height: 1px;
     margin: 0 auto 60px auto;
   }
