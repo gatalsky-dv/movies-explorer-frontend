@@ -8,6 +8,7 @@ import AboutProject from '../Main/AboutProject/AboutProject';
 import Tech from '../Main/Techs/Tech';
 import Portfolio from '../Main/Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
+import SearchForm from "../Movies/SearchForm/SearchForm";
 
 export default function App() {
 
@@ -15,11 +16,12 @@ export default function App() {
     <CurrentUserContext.Provider>
       <div className="app">
         <Header />
-        <Promo />
-        <AboutProject />
-        <Tech />
-        <AboutMe />
-        <Portfolio />
+        {/*<Promo />*/}
+        {/*<AboutProject />*/}
+        {/*<Tech />*/}
+        {/*<AboutMe />*/}
+        {/*<Portfolio />*/}
+        <SearchForm />
 				<Footer />
         {/* <Switch>
 						<ProtectedRoute

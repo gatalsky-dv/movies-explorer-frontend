@@ -6,7 +6,7 @@ export default function Header({ email }) {
 
     <footer className="footer">
       <h4 className="footer__text footer__text_title">Учебный проект Яндекс.Практикум х BeatFilm.</h4>
-      <div className='line footer__line'></div>
+      <div className="line footer__line"></div>
       <nav className="footer__nav">
         <p className="footer__text footer__text_caption">Яндекс.Практикум</p>
         <p className="footer__text footer__text_caption">Github</p>
