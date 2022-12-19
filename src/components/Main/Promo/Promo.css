@@ -137,6 +137,7 @@
   color: #FFFFFF;
   background: #5C5C5C;
   padding: 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 320px) {

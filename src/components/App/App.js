@@ -1,3 +1,5 @@
+import React from 'react';
+import '../../index.css';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Promo from '../Main/Promo/Promo';
@@ -5,9 +7,9 @@ import AboutMe from '../Main/AboutMe/AboutMe';
 import AboutProject from '../Main/AboutProject/AboutProject';
 import Tech from '../Main/Techs/Tech';
 import Portfolio from '../Main/Portfolio/Portfolio';
+import Footer from '../Footer/Footer';
 
 export default function App() {
-
 
   return (
     <CurrentUserContext.Provider>
@@ -18,6 +20,7 @@ export default function App() {
         <Tech />
         <AboutMe />
         <Portfolio />
+				<Footer />
         {/* <Switch>
 						<ProtectedRoute
 							exact
