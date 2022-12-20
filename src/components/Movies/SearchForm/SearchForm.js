@@ -6,7 +6,7 @@ export default function SearchForm({ email }) {
 		
 		<section className="search">
 			<form className="search__form">
-				<button type="button" className="search__button-search" ></button>
+				<button type="button" className="search__button-left" ></button>
 				<input className="search__film" type="text" placeholder="Фильм" />
 				<button className="search__button"></button>
 			</form>
