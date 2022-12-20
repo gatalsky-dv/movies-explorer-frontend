@@ -9,6 +9,8 @@ import Tech from '../Main/Techs/Tech';
 import Portfolio from '../Main/Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import SearchForm from "../Movies/SearchForm/SearchForm";
+import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
+
 
 export default function App() {
 
@@ -22,6 +24,7 @@ export default function App() {
         {/*<AboutMe />*/}
         {/*<Portfolio />*/}
         <SearchForm />
+        <MoviesCardList />
 				<Footer />
         {/* <Switch>
 						<ProtectedRoute
