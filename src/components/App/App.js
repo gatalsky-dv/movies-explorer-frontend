@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import MoreButton from "../Movies/MoreButton/MoreButton";
+import Profile from "../User/Profile/Profile";
 
 
 export default function App() {
@@ -24,10 +25,12 @@ export default function App() {
         {/*<Tech />*/}
         {/*<AboutMe />*/}
         {/*<Portfolio />*/}
-        <SearchForm />
-        <MoviesCardList />
-        <MoreButton />
-				<Footer />
+        {/*<SearchForm />*/}
+        {/*<MoviesCardList />*/}
+        {/*<MoreButton />*/}
+        
+				{/*<Footer />*/}
+        <Profile />
         {/* <Switch>
 						<ProtectedRoute
 							exact
