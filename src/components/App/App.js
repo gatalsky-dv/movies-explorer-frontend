@@ -10,6 +10,7 @@ import Portfolio from '../Main/Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
+import MoreButton from "../Movies/MoreButton/MoreButton";
 
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
         {/*<Portfolio />*/}
         <SearchForm />
         <MoviesCardList />
+        <MoreButton />
 				<Footer />
         {/* <Switch>
 						<ProtectedRoute
