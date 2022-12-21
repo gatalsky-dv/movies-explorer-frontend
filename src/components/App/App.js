@@ -15,6 +15,7 @@ import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
 import Error from "../Error/Error";
+import Navigation from "../Navigation/Navigation";
 
 
 export default function App() {
@@ -36,7 +37,8 @@ export default function App() {
         {/*<Profile />*/}
         {/*<Register />*/}
         {/*<Login />*/}
-        <Error />
+        {/*<Error />*/}
+        <Navigation />
         {/* <Switch>
 						<ProtectedRoute
 							exact
