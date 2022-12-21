@@ -1,50 +1,50 @@
-.register {
+.login {
 	margin: auto;
 }
 
 @media screen and (min-width: 320px) {
-	.register {
+	.login {
 		max-width: 100vw;
 		min-height: 780px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register {
+	.login {
 		min-height: 1024px;
 
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register {
+	.login {
 		min-height: 700px;
 
 	}
 }
 
-.register__header {
+.login__header {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 }
 
 @media screen and (min-width: 320px) {
-	.register__header {
+	.login__header {
 		max-width: 100vw;
 		min-height: 253px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__header {
+	.login__header {
 		min-height: 379px;
 		max-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__header {
+	.login__header {
 		min-height: 217px;
 	}
 }
@@ -71,14 +71,14 @@
 	}
 }
 
-.register__welcome {
+.login__welcome {
 	color: #000000;
 	font-style: normal;
 	font-weight: 500;
 }
 
 @media screen and (min-width: 320px) {
-	.register__welcome {
+	.login__welcome {
 		margin: 0 auto 80px auto;
 		min-width: 260px;
 		min-height: 29px;
@@ -88,25 +88,25 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__welcome {
+	.login__welcome {
 		min-width: 396px;
 		margin: 0 auto 40px auto;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__welcome {
+	.login__welcome {
 	}
 }
 
-.register__welcome {
+.login__welcome {
 	color: #000000;
 	font-style: normal;
 	font-weight: 500;
 }
 
 @media screen and (min-width: 320px) {
-	.register__welcome {
+	.login__welcome {
 		margin: 0 auto 80px auto;
 		min-width: 260px;
 		min-height: 29px;
@@ -116,65 +116,65 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__welcome {
+	.login__welcome {
 		min-width: 396px;
 		margin: 0 auto 40px auto;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__welcome {
+	.login__welcome {
 	}
 }
 
-.register__form {
+.login__form {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 }
 
 @media screen and (min-width: 320px) {
-	.register__form {
+	.login__form {
 		max-width: 260px;
 		min-height: 266px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__form {
+	.login__form {
 		min-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__form {
+	.login__form {
 	}
 }
 
-.register__info {
+.login__info {
 	display: flex;
 	flex-direction: column;
 }
 
 @media screen and (min-width: 320px) {
-	.register__info {
+	.login__info {
 		max-width: 260px;
 		min-height: 68px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__info {
+	.login__info {
 		min-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__info {
+	.login__info {
 	}
 }
 
-.register__text {
+.login__text {
 	font-style: normal;
 	font-weight: 400;
 	color: #A0A0A0;
@@ -184,24 +184,24 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__text {
+	.login__text {
 		min-width: 260px;
 		min-height: 12px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__text {
+	.login__text {
 		min-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__text {
+	.login__text {
 	}
 }
 
-.register__input {
+.login__input {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 13px;
@@ -215,24 +215,24 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__input {
+	.login__input {
 		min-width: 230px;
 		min-height: 16px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__input {
+	.login__input {
 		min-width: 366px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__input {
+	.login__input {
 	}
 }
 
-.register__password {
+.login__password {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 13px;
@@ -246,24 +246,24 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__password {
+	.login__password {
 		min-width: 230px;
 		min-height: 16px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__password {
+	.login__password {
 		min-width: 366px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__password {
+	.login__password {
 	}
 }
 
-.register__error {
+.login__error {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 10px;
@@ -273,7 +273,7 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__error {
+	.login__error {
 		margin: 10px auto auto auto;
 		min-width: 260px;
 		min-height: 12px;
@@ -281,40 +281,40 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__error {
+	.login__error {
 		min-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__error {
+	.login__error {
 	}
 }
 
-.register__button {
+.login__button {
 	margin: auto;
 
 }
 
 @media screen and (min-width: 320px) {
-	.register__button {
+	.login__button {
 		max-width: 260px;
 		min-height: 266px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.register__button {
+	.login__button {
 		min-width: 396px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	.register__button {
+	.login__button {
 	}
 }
 
-.register__signup {
+.login__signup {
 	background: #2BE080;
 	border-radius: 3px;
 	color: #FFFFFF;
@@ -327,7 +327,7 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__signup {
+	.login__signup {
 		margin: 157px auto 14px auto;
 		min-width: 260px;
 		min-height: 45px;
@@ -337,7 +337,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__signup {
+	.login__signup {
 		min-width: 396px;
 		font-size: 14px;
 		line-height: 17px;
@@ -345,11 +345,11 @@
 }
 
 @media screen and (min-width: 1280px) {
-	.register__signup {
+	.login__signup {
 	}
 }
 
-.register__question {
+.login__question {
 	color: #A0A0A0;
 	font-style: normal;
 	font-weight: 400;
@@ -358,7 +358,7 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__question {
+	.login__question {
 		margin: 14px 7px 30px auto;
 		min-width: 145px;
 		min-height: 15px;
@@ -368,7 +368,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__question {
+	.login__question {
 		margin: 16px 6px 232px auto;
 		min-width: 169px;
 		min-height: 17px;
@@ -378,12 +378,12 @@
 }
 
 @media screen and (min-width: 1280px) {
-	.register__question {
+	.login__question {
 		margin: 16px 6px 70px auto;
 	}
 }
 
-.register__signin {
+.login__signin {
 	color: #2BE080;
 	font-style: normal;
 	font-weight: 400;
@@ -392,7 +392,7 @@
 }
 
 @media screen and (min-width: 320px) {
-	.register__signin {
+	.login__signin {
 		margin: 14px auto 30px 0;
 		min-width: 36px;
 		min-height: 15px;
@@ -402,7 +402,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.register__signin {
+	.login__signin {
 		margin: 16px auto 232px 0;
 		min-width: 42px;
 		min-height: 17px;
@@ -412,11 +412,11 @@
 }
 
 @media screen and (min-width: 1280px) {
-	.register__signin {
+	.login__signin {
 		margin: 16px auto 70px 0;
 	}
 }
 
-.register__block {
+.login__block {
 	display: flex;
 }

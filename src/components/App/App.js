@@ -13,6 +13,7 @@ import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import MoreButton from "../Movies/MoreButton/MoreButton";
 import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
+import Login from "../User/Ligin/Login";
 
 
 export default function App() {
@@ -32,7 +33,8 @@ export default function App() {
         
 				{/*<Footer />*/}
         {/*<Profile />*/}
-        <Register />
+        {/*<Register />*/}
+        <Login />
         {/* <Switch>
 						<ProtectedRoute
 							exact
