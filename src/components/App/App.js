@@ -14,6 +14,7 @@ import MoreButton from "../Movies/MoreButton/MoreButton";
 import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
+import Error from "../Error/Error";
 
 
 export default function App() {
@@ -34,7 +35,8 @@ export default function App() {
 				{/*<Footer />*/}
         {/*<Profile />*/}
         {/*<Register />*/}
-        <Login />
+        {/*<Login />*/}
+        <Error />
         {/* <Switch>
 						<ProtectedRoute
 							exact

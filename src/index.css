@@ -21,3 +21,5 @@
 @import url(./components/User/Profile/Profile.css);
 @import url(./components/User/Register/Register.css);
 @import url(./components/User/Ligin/Login.css);
+
+@import url(./components/Error/Error.css);
