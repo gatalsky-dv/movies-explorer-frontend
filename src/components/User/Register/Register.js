@@ -1,0 +1,39 @@
+import React from 'react';
+
+export default function Register() {
+	
+	return (
+		
+		<section className="register">
+			<header className="register__header">
+				<a href="/" className="header__logo header__logo_login" />
+				<h1 className="register__welcome">Добро пожаловать!</h1>
+			</header>
+			<form className="register__form">
+				<div className="register__info">
+					<label className="register__text">Имя</label>
+					<input className="register__input" required id="name" name="name" type="text" placeholder="Имя" value="Дмитрий"/>
+				</div>
+				<div className="register__info">
+					<label className="register__text">E-mail</label>
+					<input className="register__input" required id="email" name="email" type="email" placeholder="Email" value="pochta@yandex.ru" />
+				</div>
+				<div className="register__info">
+					<label className="register__text">Пароль</label>
+					<input className="register__password" required id="password" name="password" type="password" value="****" />
+					<label className="register__error">Что-то пошло не так...</label>
+				</div>
+			</form>
+			<div className="register__button">
+				<button className="register__signup" type="button">Зарегестрироваться</button>
+				<div className="register__block">
+					<p className="register__question">Уже зарегестрированны?</p>
+					<a href="/" className="register__signin">Войти</a>
+				</div>
+
+			</div>
+		
+		</section>
+	
+	)
+}

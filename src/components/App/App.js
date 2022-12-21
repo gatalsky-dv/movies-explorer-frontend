@@ -12,6 +12,7 @@ import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import MoreButton from "../Movies/MoreButton/MoreButton";
 import Profile from "../User/Profile/Profile";
+import Register from "../User/Register/Register";
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
   return (
     <CurrentUserContext.Provider>
       <div className="app">
-        <Header />
+        {/*<Header />*/}
         {/*<Promo />*/}
         {/*<AboutProject />*/}
         {/*<Tech />*/}
@@ -30,7 +31,8 @@ export default function App() {
         {/*<MoreButton />*/}
         
 				{/*<Footer />*/}
-        <Profile />
+        {/*<Profile />*/}
+        <Register />
         {/* <Switch>
 						<ProtectedRoute
 							exact
