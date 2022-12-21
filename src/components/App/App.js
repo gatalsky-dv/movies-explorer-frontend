@@ -16,6 +16,7 @@ import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
 import Error from "../Error/Error";
 import Navigation from "../Navigation/Navigation";
+import HeaderMovies from "../HeaderMovies/HeaderMovies";
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
     <CurrentUserContext.Provider>
       <div className="app">
         {/*<Header />*/}
+        <HeaderMovies />
         {/*<Promo />*/}
         {/*<AboutProject />*/}
         {/*<Tech />*/}
@@ -38,7 +40,7 @@ export default function App() {
         {/*<Register />*/}
         {/*<Login />*/}
         {/*<Error />*/}
-        <Navigation />
+        {/*<Navigation />*/}
         {/* <Switch>
 						<ProtectedRoute
 							exact

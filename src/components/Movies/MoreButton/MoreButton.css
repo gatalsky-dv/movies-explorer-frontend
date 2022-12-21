@@ -3,25 +3,6 @@
 	display: flex;
 }
 
-@media screen and (min-width: 320px) {
-	.more {
-		max-width: 320px;
-		min-height: 166px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.more {
-		max-width: 768px;
-	}
-}
-
-@media screen and (min-width: 1280px) {
-	.more {
-		max-width: 1280px;
-	}
-}
-
 .more__button {
 	background: #F9F9F9;
 	border-radius: 6px;
@@ -37,6 +18,11 @@
 }
 
 @media screen and (min-width: 320px) {
+	.more {
+		max-width: 320px;
+		min-height: 166px;
+	}
+
 	.more__button {
 		margin: 50px auto 80px auto;
 		min-width: 300px;
@@ -47,12 +33,20 @@
 }
 
 @media screen and (min-width: 768px) {
+	.more {
+		max-width: 768px;
+	}
+
 	.more__button {
 		min-width: 708px;
 	}
 }
 
 @media screen and (min-width: 1280px) {
+	.more {
+		max-width: 1280px;
+	}
+
 	.more__button {
 		min-width: 1140px;
 	}
