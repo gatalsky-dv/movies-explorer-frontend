@@ -19,7 +19,6 @@
 		min-height: 1147px;
 		max-width: 94.25%;
 		margin: 70px auto 0 auto;
-		justify-items: stretch;
 		gap: 45px 30px;
 		grid-template-rows: repeat(5, auto);
 		grid-template-columns: repeat(2, auto);
@@ -31,7 +30,7 @@
 		max-height: 1200px;
 		max-width: 90.262%;
 		gap: 58px 30px;
-		grid-template-rows: repeat(1, auto);
+		grid-template-rows: repeat(5, auto);
 		grid-template-columns: repeat(3, auto);
 	}
 }

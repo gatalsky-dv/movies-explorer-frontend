@@ -24,7 +24,7 @@
 	background-size: 15px;
 }
 
-.search__button-left {
+.search__glass {
 	margin: auto 0;
 	border-radius: 48px;
 	border: 1px solid #E8E8E8;
@@ -32,7 +32,6 @@
 	min-width: 34px;
 	min-height: 34px;
 	background-image: url(../../../images/glass-black.svg);
-	cursor: pointer;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 15px;
@@ -87,7 +86,7 @@
 		justify-content: center;
 	}
 
-	.search__button-left {
+	.search__glass {
 		display: none;
 	}
 
@@ -124,7 +123,7 @@
 		margin: 70px auto 15px auto;
 	}
 
-	.search__button-left {
+	.search__glass {
 		display: flex;
 	}
 

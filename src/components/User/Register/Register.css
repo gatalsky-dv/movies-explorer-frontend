@@ -93,6 +93,10 @@
 	border: none;
 	padding: 0;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
 .register__question {

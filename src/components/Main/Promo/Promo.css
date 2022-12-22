@@ -13,10 +13,14 @@
 }
 
 .promo__more {
+  display: flex;
   color: #FFFFFF;
   background: #5C5C5C;
+  opacity: 0.6;
   padding: 0;
   cursor: pointer;
+  justify-content: center;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 320px) {

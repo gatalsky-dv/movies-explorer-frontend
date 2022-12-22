@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header({ email }) {
+export default function Footer() {
 
   return (
 

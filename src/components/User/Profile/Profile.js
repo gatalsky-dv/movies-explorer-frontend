@@ -19,8 +19,8 @@ export default function Profile() {
 				</div>
 			</form>
 			<div className="profile__button">
-				<button className="profile__edit" type="button">Редактировать</button>
-				<a href="/" className="profile__edit profile__edit_exit">Выйти из аккаунта</a>
+				<Link to="/movies" className="profile__edit" type="button">Редактировать</Link>
+				<Link to="/" className="profile__edit profile__edit_exit">Выйти из аккаунта</Link>
 			</div>
 		
 		</section>

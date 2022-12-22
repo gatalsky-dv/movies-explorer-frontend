@@ -27,7 +27,7 @@
   line-height: 16px;
   color: #FFFFFF;
   border: 0px;
-  /*background-color: none;*/
+  text-decoration: none;
 }
 
 .header__login {
@@ -40,6 +40,10 @@
   font-weight: 500;
   line-height: 16px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 320px) {
@@ -67,9 +71,10 @@
   }
 
   .header__login {
-    max-width: 54px;
-    max-height: 26px;
+    min-width: 54px;
+    min-height: 26px;
     font-size: 10px;
+
   }
 }
 

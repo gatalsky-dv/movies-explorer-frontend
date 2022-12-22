@@ -5,21 +5,20 @@ export default function Navigation() {
 	
 	return (
 		
-		<section className="navigation">
+		<nav className="navigation">
 			<a href="/" className="navigation__close"></a>
-			<h2 className="navigation__menu">Главная</h2>
-			<h2 className="navigation__menu">Фильмы</h2>
-			<h2 className="navigation__menu">Сохраненные фильмы</h2>
+			<Link to="/" className="navigation__menu">Главная</Link>
+			<Link to="movies" className="navigation__menu">Фильмы</Link>
+			<Link to="saved-movies" className="navigation__menu">Сохраненные фильмы</Link>
 			<div className="navigation__account">
 				<h3 className="navigation__text">Аккаунт</h3>
-				{/*<Link to={"/"}></Link>*/}
 				<div className="navigation__button">
 					<a href="/" className="navigation__link"></a>
 				</div>
 				
 			</div>
 			
-		</section>
+		</nav>
 	
 	)
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function Login() {
 	
@@ -20,10 +21,10 @@ export default function Login() {
 				</div>
 			</form>
 			<div className="login__button">
-				<button className="login__signup" type="button">Войти</button>
+				<Link to="/movies" className="login__signup" type="button">Войти</Link>
 				<div className="login__block">
 					<p className="login__question">Еще не зарегестрированны?</p>
-					<a href="/" className="login__signin">Регистрация</a>
+					<Link to="/signup" className="login__signin">Регистрация</Link>
 				</div>
 			
 			</div>

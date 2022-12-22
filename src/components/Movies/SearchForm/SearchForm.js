@@ -1,14 +1,14 @@
 import React from 'react';
 
-export default function SearchForm({ email }) {
+export default function SearchForm() {
 	
 	return (
 		
 		<section className="search">
 			<form className="search__form">
-				<button type="button" className="search__button-left" ></button>
+				<div className="search__glass" ></div>
 				<input className="search__film" type="text" placeholder="Фильм" />
-				<button className="search__button"></button>
+				<button type="button" className="search__button"></button>
 			</form>
 			<div className="line line__search"></div>
 			<div className="search__check">

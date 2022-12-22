@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../../index.css';
+import './App.css';
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Promo from '../Main/Promo/Promo';
@@ -10,73 +12,67 @@ import Portfolio from '../Main/Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
-import MoreButton from "../Movies/MoreButton/MoreButton";
 import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
 import Error from "../Error/Error";
 import Navigation from "../Navigation/Navigation";
 import HeaderMovies from "../HeaderMovies/HeaderMovies";
-
+import MoviesCard from "../Movies/MoviesCard/MoviesCard";
 
 export default function App() {
 
   return (
-    <CurrentUserContext.Provider>
-      <div className="app">
-        {/*<Header />*/}
-        <HeaderMovies />
-        {/*<Promo />*/}
-        {/*<AboutProject />*/}
-        {/*<Tech />*/}
-        {/*<AboutMe />*/}
-        {/*<Portfolio />*/}
-        {/*<SearchForm />*/}
-        {/*<MoviesCardList />*/}
-        {/*<MoreButton />*/}
-        
-				{/*<Footer />*/}
-        {/*<Profile />*/}
-        {/*<Register />*/}
-        {/*<Login />*/}
-        {/*<Error />*/}
-        {/*<Navigation />*/}
-        {/* <Switch>
-						<ProtectedRoute
-							exact
-							path='/'
-							component={ Main }
-							loggedIn={loggedIn}
-							onEditProfile={handleEditProfileClick}
-							onAddPlace={handleAddPlaceClick}
-							onEditAvatar={handleEditAvatarClick}
-							onCardClick={handleCardClick}
-							cards={cards}
-							onCardLike={handleCardLike}
-							onCardDelete={handleCardDelete}
-						/>
-						<Route path='/sign-in'>
-							<Login
-								onLogin={onLogin}
-							/>
-						</Route>
-						<Route path='/sign-up'>
-							<Register
-								onRegister={onRegister}
-							/>
-						</Route>
-						<Route path='*'>
-							{loggedIn ? (
-								<Redirect to='/' />
-							) : (
-								<Redirect to='/sign-in' />
-							)}
-						</Route>
-					</Switch> */}
+    <BrowserRouter>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Header />
+            <Promo />
+            <AboutProject />
+            <Tech />
+            <AboutMe />
+            <Portfolio />
+            <Footer />
+          </>
+        } />
+        <Route path="/movies" element={
+          <>
+            <HeaderMovies />
+            <SearchForm />
+            <MoviesCardList />
+            <Footer />
+          </>
+        } />
+        <Route path="/saved-movies" element={
+          <>
+            <HeaderMovies />
+            <SearchForm />
+            
+            <Footer />
+          </>
+        } />
+        <Route path="/profile" element={
+          <>
+            <Profile />
+          </>
+        } />
+        <Route path="/signin" element={
+          <>
+            <Login />
+          </>
+        } />
+        <Route path="/signup" element={
+          <>
+            <Register />
+          </>
+        } />
+        <Route path="*" element={ <Error />} />
+      </Routes>
+      
 
-        {/* <Footer/> */}
-
-      </div>
-    </CurrentUserContext.Provider>
+    </div>
+    </BrowserRouter>
   );
 }

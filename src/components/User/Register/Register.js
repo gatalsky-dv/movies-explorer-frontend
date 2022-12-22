@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 export default function Register() {
 	
@@ -25,10 +26,10 @@ export default function Register() {
 				</div>
 			</form>
 			<div className="register__button">
-				<button className="register__signup" type="button">Зарегестрироваться</button>
+				<Link to="/profile" className="register__signup" type="button">Зарегестрироваться</Link>
 				<div className="register__block">
 					<p className="register__question">Уже зарегестрированны?</p>
-					<a href="/" className="register__signin">Войти</a>
+					<Link to="/signin" className="register__signin">Войти</Link>
 				</div>
 
 			</div>
