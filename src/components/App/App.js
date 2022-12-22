@@ -16,10 +16,8 @@ import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
 import Error from "../Error/Error";
-import Navigation from "../Navigation/Navigation";
 import HeaderMovies from "../HeaderMovies/HeaderMovies";
-import MoviesCard from "../Movies/MoviesCard/MoviesCard";
-
+import SavedMovies from "../SavedMovies/SavedMovies";
 export default function App() {
 
   return (
@@ -49,7 +47,7 @@ export default function App() {
           <>
             <HeaderMovies />
             <SearchForm />
-            
+            <SavedMovies />
             <Footer />
           </>
         } />

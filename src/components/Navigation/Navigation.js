@@ -13,7 +13,7 @@ export default function Navigation({ isOpen, onClose }) {
 			<div className="navigation__account">
 				<h3 className="navigation__text">Аккаунт</h3>
 				<div className="navigation__button">
-					<Link href="/profile" className="navigation__link"></Link>
+					<Link to="/profile" className="navigation__link"></Link>
 				</div>
 			</div>
 			

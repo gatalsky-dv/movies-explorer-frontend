@@ -8,18 +8,42 @@ export default function MoviesCardList() {
 	return (
 		<>
 			<section className="moviescardlist">
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
+				<MoviesCard
+					cardClick="card__save_saved"
+				/>
 			</section>
 			<MoreButton />
 		</>

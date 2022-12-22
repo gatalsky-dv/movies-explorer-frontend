@@ -2,6 +2,10 @@
 	margin: auto;
 }
 
+.card__save_active {
+	display: none;
+}
+
 .card__img {
 	margin: auto;
 	border-radius: 6px;
@@ -22,7 +26,7 @@
 	padding: 0;
 	position: absolute;
 }
-.saved {
+.card__save_saved {
 	margin: auto;
 	background-image: url("../../../images/save3.svg");
 	border: none;
@@ -30,7 +34,7 @@
 	background-color: transparent;
 }
 
-.delete {
+.card__save_delete {
 	margin: auto;
 	background-image: url("../../../images/del3.svg");
 	border: none;
@@ -83,7 +87,7 @@
 		margin-top: 10px;
 	}
 
-	.saved {
+	.card__save_saved {
 		position: absolute;
 		margin-left: -31px;
 		margin-top: 10px;
@@ -91,7 +95,7 @@
 		min-height: 21px;
 	}
 
-	.delete {
+	.card__save_delete {
 		position: absolute;
 		margin-left: -31px;
 		margin-top: 10px;
@@ -136,12 +140,12 @@
 		margin-top: 14px;
 	}
 
-	.saved {
+	.card__save_saved {
 		margin-left: -35px;
 		margin-top: 14px;
 	}
 
-	.delete {
+	.card__save_delete {
 		margin-left: -35px;
 		margin-top: 14px;
 	}
