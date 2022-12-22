@@ -7,7 +7,7 @@ export default function Login() {
 		
 		<section className="login">
 			<header className="login__header">
-				<a href="/" className="header__logo header__logo_login" />
+				<Link to="/" className="header__logo header__logo_login"></Link>
 				<h1 className="login__welcome">Рады видеть!</h1>
 			</header>
 			<form className="login__form">

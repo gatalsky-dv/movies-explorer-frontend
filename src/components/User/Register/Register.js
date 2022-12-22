@@ -7,7 +7,7 @@ export default function Register() {
 		
 		<section className="register">
 			<header className="register__header">
-				<a href="/" className="header__logo header__logo_login" />
+				<Link to="/" className="header__logo header__logo_login"></Link>
 				<h1 className="register__welcome">Добро пожаловать!</h1>
 			</header>
 			<form className="register__form">
