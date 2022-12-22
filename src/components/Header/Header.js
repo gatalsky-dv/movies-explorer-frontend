@@ -6,10 +6,10 @@ export default function Header() {
   return (
 
     <header className="header">
-      <a href="/" className="header__logo" />
+      <Link to="/" className="header__logo"></Link>
       <div className="header__profile">
-        <a href="/signup" className="header__registration">Регистрация</a>
-        <a href="/signin" className="header__login">Войти</a>
+        <Link to="/signup" className="header__registration">Регистрация</Link>
+        <Link to="/signin" className="header__login">Войти</Link>
       </div>
     </header>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Tech({ email }) {
+export default function Tech() {
 
   return (
     <section className="tech">

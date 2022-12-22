@@ -3,7 +3,7 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 import MoreButton from "../MoreButton/MoreButton";
 
 
-export default function MoviesCardList(props) {
+export default function MoviesCardList() {
 	
 	return (
 		<>

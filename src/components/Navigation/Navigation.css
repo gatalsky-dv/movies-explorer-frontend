@@ -1,6 +1,19 @@
 .navigation {
 	display: flex;
 	flex-direction: column;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .5s linear, visibility .5s linear;
+	background-color: #ffffff;
+}
+
+.navigation_open {
+	visibility: visible;
+	opacity: 1;
 }
 
 .navigation__close {
@@ -8,6 +21,9 @@
 	width: 25px;
 	height: 25px;
 	text-align: center;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
 }
 
 .navigation__menu {
@@ -19,6 +35,7 @@
 	text-align: center;
 	display: inline;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .navigation__account {
@@ -89,6 +106,7 @@
 
 	.navigation__close {
 		margin: 22px 22px 105px auto;
+
 	}
 
 	.navigation__menu {
