@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../../index.css';
 import './App.css';
-import CurrentUserContext from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 import Promo from '../Main/Promo/Promo';
 import AboutMe from '../Main/AboutMe/AboutMe';
