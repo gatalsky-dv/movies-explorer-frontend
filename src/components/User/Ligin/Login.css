@@ -126,10 +126,6 @@
 		min-height: 253px;
 	}
 
-	.header__logo_login {
-		margin: 56px auto 50px auto;
-	}
-
 	.login__welcome {
 		margin: 0 auto 80px auto;
 		min-width: 260px;
@@ -217,10 +213,6 @@
 		max-width: 396px;
 	}
 
-	.header__logo_login {
-		margin: 232px auto 40px 0;
-	}
-
 	.login__welcome {
 		min-width: 396px;
 		margin: 0 auto 40px auto;
@@ -289,10 +281,6 @@
 
 	.login__header {
 		min-height: 217px;
-	}
-
-	.header__logo_login {
-		margin: 70px auto 40px 0;
 	}
 
 	.login__question {

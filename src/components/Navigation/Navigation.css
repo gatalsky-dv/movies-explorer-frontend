@@ -44,7 +44,7 @@
 	margin: auto;
 }
 
-.navigation__text {
+.text {
 	align-items: center;
 	color: #000000;
 	font-style: normal;
@@ -53,7 +53,7 @@
 	line-height: 16px;
 }
 
-.navigation__button {
+.button {
 	background: #F9F9F9;
 	border-radius: 6px;
 	min-width: 30px;
@@ -63,7 +63,7 @@
 	cursor: pointer;
 }
 
-.navigation__link {
+.link {
 	background-image: url(../../images/account.svg);
 	margin: auto;
 	width: 10.38px;

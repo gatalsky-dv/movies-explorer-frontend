@@ -22,7 +22,7 @@ export default function SearchForm() {
 				<input className="search__film" type="text" placeholder="Фильм" required />
 				<button type="button" className="search__button" onClick={handleClickSearch}></button>
 			</form>
-			<div className="line line__search"></div>
+			<div className="line line_search"></div>
 			<div className="search__check">
 				
 				<img src={check === false ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/>

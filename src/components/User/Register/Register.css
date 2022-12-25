@@ -8,7 +8,7 @@
 	flex-direction: column;
 }
 
-.header__logo_login {
+.logo_login {
 	margin: auto;
 }
 
@@ -129,7 +129,7 @@
 		min-height: 253px;
 	}
 
-	.header__logo_login {
+	.logo_login {
 		margin: 56px auto 50px auto;
 	}
 
@@ -220,7 +220,7 @@
 		max-width: 396px;
 	}
 
-	.header__logo_login {
+	.logo_login {
 		margin: 232px auto 40px 0;
 	}
 
@@ -294,7 +294,7 @@
 		min-height: 217px;
 	}
 
-	.header__logo_login {
+	.logo_login {
 		margin: 70px auto 40px 0;
 	}
 

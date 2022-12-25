@@ -84,7 +84,7 @@
   }
 
   .caption {
-    min-width: 292px;
+    min-width: 88.75%;
     min-height: 22px;
     font-size: 18px;
     line-height: 22px;
@@ -93,20 +93,19 @@
   }
 
   .line {
-    min-width: 292px;
+    min-width: 88.75%;
     min-height: 1px;
     margin: 0 auto 60px auto;
   }
 
   .diplom {
-    max-width: 284px;
+    min-width: 88.75%;
     max-height: 328px;
     margin: 0 auto 4px auto;
     flex-direction: column;
   }
 
   .diplom__cell {
-    max-width: 284px;
     max-height: 108px;
     margin: 0 auto 56px auto;
   }
@@ -115,7 +114,7 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.04em;
-    max-width: 284px;
+    max-width: 88.75%;
     min-height: 44px;
     margin: 0 auto 16px auto;
   }
@@ -123,24 +122,25 @@
   .diplom__text {
     font-size: 11px;
     line-height: 145%;
-    max-width: 284px;
+    max-width: 88.75%;
     min-height: 48px;
     margin: auto;
   }
 
   .develop {
-    max-width: 284px;
-    min-height: 58px;
-    margin-bottom: 70px;
+    min-width: 88.75%;
+    /*min-height: 58px;*/
+    margin: auto auto 70px auto;
+    justify-content: center;
   }
 
   .develop__backend {
-    min-width: 100px;
+    min-width: 35.215%;
     min-height: 58px;
   }
 
   .develop__backend-time {
-    min-width: 100px;
+    min-width: 37.19%;
     min-height: 35px;
     margin: 0 0 10px 0;
   }
@@ -167,7 +167,7 @@
   }
 
   .develop__frontend {
-    min-width: 184px;
+    min-width: 64.7%;
     min-height: 58px;
   }
 

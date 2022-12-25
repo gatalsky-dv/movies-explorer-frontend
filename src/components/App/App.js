@@ -3,11 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../../index.css';
 import './App.css';
 import Header from '../Header/Header';
-import Promo from '../Main/Promo/Promo';
-import AboutMe from '../Main/AboutMe/AboutMe';
-import AboutProject from '../Main/AboutProject/AboutProject';
-import Tech from '../Main/Techs/Tech';
-import Portfolio from '../Main/Portfolio/Portfolio';
+import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
@@ -26,11 +22,7 @@ export default function App() {
         <Route path="/" element={
           <>
             <Header />
-            <Promo />
-            <AboutProject />
-            <Tech />
-            <AboutMe />
-            <Portfolio />
+            <Main />
             <Footer />
           </>
         } />
@@ -67,7 +59,6 @@ export default function App() {
         } />
         <Route path="*" element={ <Error />} />
       </Routes>
-      
 
     </div>
     </BrowserRouter>

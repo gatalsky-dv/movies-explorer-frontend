@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.aboutme_name {
+.aboutme__name {
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -36,15 +36,15 @@
     flex-direction: column;
   }
 
-  .aboutme_img {
+  .aboutme__img {
     margin: auto;
     width: 292px;
     height: 352px;
     object-fit: cover;
   }
 
-  .aboutme_name {
-    min-width: 292px;
+  .aboutme__name {
+    min-width: 88.75%;
     min-height: 36px;
     margin: 40px auto 20px auto;
     font-size: 30px;
@@ -52,7 +52,7 @@
   }
 
   .aboutme__profession {
-    min-width: 292px;
+    min-width: 88.75%;
     min-height: 16px;
     margin: auto;
     font-size: 11px;
@@ -60,7 +60,7 @@
   }
 
   .aboutme__text {
-    max-width: 292px;
+    max-width: 88.75%;
     min-height: 112px;
     margin: 20px auto 40px auto;
     font-size: 12px;
@@ -68,7 +68,7 @@
   }
 
   .aboutme__github {
-    min-width: 292px;
+    min-width: 88.75%;
     min-height: 17px;
     margin: 0 auto 70px auto;
     font-size: 14px;
@@ -81,7 +81,7 @@
     min-height: 585px;
   }
 
-  .aboutme_img {
+  .aboutme__img {
     width: 255px;
     height: 307px;
     margin: 207px 50px 0 auto;
@@ -89,7 +89,7 @@
     right: 0;
   }
 
-  .aboutme_name {
+  .aboutme__name {
     margin: 16px auto 16px 50px;
     min-width: 348px;
     min-height: 40px;
@@ -107,6 +107,7 @@
 
   .aboutme__text {
     min-width: 364px;
+    max-width: 47.396%;
     min-height: 108px;
     margin: 20px auto 87px 50px;
     font-size: 11px;
@@ -127,13 +128,13 @@
     min-height: 608px;
   }
 
-  .aboutme_img {
+  .aboutme__img {
     width: 270px;
     height: 327px;
     margin: 227px 70px 0 auto;
   }
 
-  .aboutme_name {
+  .aboutme__name {
     margin: 16px auto 18px 70px;
     min-width: 600px;
     min-height: 58px;

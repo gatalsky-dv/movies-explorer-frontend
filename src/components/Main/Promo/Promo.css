@@ -45,7 +45,7 @@
     text-align: center;
     letter-spacing: -0.04em;
     margin: 0 auto 24px auto;
-    max-width: 300px;
+    max-width: 88.75%;
     min-height: 114px;
   }
 
@@ -58,7 +58,7 @@
     opacity: 0.5;
     mix-blend-mode: normal;
     margin: 0 auto 80px auto;
-    max-width: 260px;
+    max-width: 85.81%;
     min-height: 32px;
   }
 

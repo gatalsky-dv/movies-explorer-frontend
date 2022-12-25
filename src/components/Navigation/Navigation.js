@@ -11,9 +11,9 @@ export default function Navigation({ isOpen, onClose }) {
 			<Link to="/movies" className="navigation__menu">Фильмы</Link>
 			<Link to="/saved-movies" className="navigation__menu">Сохраненные фильмы</Link>
 			<div className="navigation__account">
-				<h3 className="navigation__text">Аккаунт</h3>
-				<div className="navigation__button">
-					<Link to="/profile" className="navigation__link"></Link>
+				<h3 className="text">Аккаунт</h3>
+				<div className="button">
+					<Link to="/profile" className="link"></Link>
 				</div>
 			</div>
 			

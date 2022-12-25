@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.tech_caption {
+.tech__caption {
   color: #000000;
   font-style: normal;
   font-weight: 400;
@@ -41,8 +41,8 @@
     flex-direction: column;
   }
 
-  .tech_caption {
-    max-width: 292px;
+  .tech__caption {
+    min-width: 88.75%;
     min-height: 36px;
     font-size: 30px;
     line-height: 36px;
@@ -52,7 +52,7 @@
   }
 
   .tech__text {
-    max-width: 292px;
+    min-width: 88.75%;
     min-height: 32px;
     font-size: 11px;
     line-height: 16px;
@@ -84,7 +84,7 @@
     min-height: 585px;
   }
 
-  .tech_caption {
+  .tech__caption {
     max-width: 600px;
     max-height: 58px;
     margin-top: 10px;
@@ -113,7 +113,7 @@
     min-height: 608px;
   }
 
-  .tech_caption {
+  .tech__caption {
     margin-top: 24px;
   }
 
