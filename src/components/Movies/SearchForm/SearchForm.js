@@ -19,7 +19,7 @@ export default function SearchForm() {
 		<section className="search">
 			<form className="search__form">
 				<div className="search__glass" ></div>
-				<input className="search__film" type="text" placeholder="Фильм" required />
+				<input className="search__film" type="text" placeholder="Фильм" required/>
 				<button type="button" className="search__button" onClick={handleClickSearch}></button>
 			</form>
 			<div className="line line_search"></div>

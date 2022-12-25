@@ -5,15 +5,14 @@ import AboutMe from '../Main/AboutMe/AboutMe';
 import AboutProject from '../Main/AboutProject/AboutProject';
 import Tech from '../Main/Techs/Tech';
 import Portfolio from '../Main/Portfolio/Portfolio';
+import SearchForm from "./SearchForm/SearchForm";
+import MoviesCardList from "./MoviesCardList/MoviesCardList";
 
-export default function Main() {
+export default function Movies() {
 	return (
 		<main className="main">
-			<Promo />
-			<AboutProject />
-			<Tech />
-			<AboutMe />
-			<Portfolio />
+			<SearchForm />
+			<MoviesCardList />
 		</main>
 	)
 }

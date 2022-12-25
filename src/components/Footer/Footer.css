@@ -85,13 +85,13 @@
   }
 
   .footer__line {
-    min-width: 94.25%;
+    min-width: 88.75%;
   }
 
   .footer__nav {
     display: flex;
     justify-content:space-between;
-    min-width: 94.25%;
+    min-width: 88.75%;
   }
 }
 
@@ -105,13 +105,5 @@
     margin: auto 78.5% auto 0;
     order: -1;
     color: #000000;
-  }
-
-  .footer__line {
-    min-width: 90.262%;
-  }
-
-  .footer__nav {
-    min-width: 90.262%;
   }
 }

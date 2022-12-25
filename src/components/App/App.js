@@ -5,14 +5,12 @@ import './App.css';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import SearchForm from "../Movies/SearchForm/SearchForm";
-import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import Profile from "../User/Profile/Profile";
 import Register from "../User/Register/Register";
 import Login from "../User/Ligin/Login";
 import Error from "../Error/Error";
 import HeaderMovies from "../HeaderMovies/HeaderMovies";
-import SavedMovies from "../SavedMovies/SavedMovies";
+import Movies from "../Movies/Movies";
 export default function App() {
 
   return (
@@ -29,16 +27,14 @@ export default function App() {
         <Route path="/movies" element={
           <>
             <HeaderMovies />
-            <SearchForm />
-            <MoviesCardList />
+            <Movies />
             <Footer />
           </>
         } />
         <Route path="/saved-movies" element={
           <>
             <HeaderMovies />
-            <SearchForm />
-            <SavedMovies />
+            <Movies />
             <Footer />
           </>
         } />
