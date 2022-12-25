@@ -110,6 +110,7 @@
 @media screen and (min-width: 1280px) {
   .promo {
     min-height: 524px;
+    position: relative;
   }
 
   .promo__img {

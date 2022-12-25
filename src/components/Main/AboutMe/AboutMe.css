@@ -126,6 +126,7 @@
 @media screen and (min-width: 1280px) {
   .aboutme {
     min-height: 608px;
+    position: relative;
   }
 
   .aboutme__img {

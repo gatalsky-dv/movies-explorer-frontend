@@ -52,7 +52,7 @@
   }
 
   .tech__text {
-    min-width: 88.75%;
+    max-width: 88.75%;
     min-height: 32px;
     font-size: 11px;
     line-height: 16px;
