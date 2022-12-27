@@ -1,0 +1,293 @@
+.login {
+	margin: auto;
+}
+
+.login__header {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.login__welcome {
+	color: #000000;
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+
+.login__welcome {
+	color: #000000;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.login__form {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.login__info {
+	display: flex;
+	flex-direction: column;
+}
+
+.login__text {
+	font-style: normal;
+	font-weight: 400;
+	color: #A0A0A0;
+	font-size: 10px;
+	line-height: 12px;
+	margin: 0 auto 10px 0;
+}
+
+.login__input {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	color: #000000;
+	margin-bottom: 20px;
+	padding: 15px;
+	background: #F9F9F9;
+	border-radius: 8px;
+	border: none;
+}
+
+.login__password {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	color: #EE3465;
+	margin: auto;
+	padding: 15px;
+	background: #F9F9F9;
+	border-radius: 8px;
+	border: none;
+}
+
+.login__error {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	color: #EE3465;
+	padding: 0;
+}
+
+.login__button {
+	margin: auto;
+}
+
+.login__signup {
+	background: #2BE080;
+	border-radius: 3px;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.login__question {
+	color: #A0A0A0;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+}
+
+.login__signin {
+	color: #2BE080;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+}
+
+.login__block {
+	display: flex;
+}
+
+@media screen and (min-width: 320px) {
+	.login {
+		max-width: 100vw;
+		min-height: 780px;
+	}
+
+	.login__header {
+		max-width: 100vw;
+		min-height: 253px;
+	}
+
+	.login__welcome {
+		margin: 0 auto 80px auto;
+		min-width: 260px;
+		min-height: 29px;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	.login__welcome {
+		margin: 0 auto 80px auto;
+		min-width: 260px;
+		min-height: 29px;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	.login__form {
+		max-width: 260px;
+		min-height: 266px;
+	}
+
+	.login__info {
+		max-width: 260px;
+		min-height: 68px;
+	}
+
+	.login__text {
+		min-width: 260px;
+		min-height: 12px;
+	}
+
+	.login__input {
+		min-width: 230px;
+		min-height: 16px;
+	}
+
+	.login__password {
+		min-width: 230px;
+		min-height: 16px;
+	}
+
+	.login__error {
+		margin: 10px auto auto auto;
+		min-width: 260px;
+		min-height: 12px;
+	}
+
+	.login__button {
+		max-width: 260px;
+		min-height: 266px;
+	}
+
+	.login__signup {
+		margin: 157px auto 14px auto;
+		min-width: 260px;
+		min-height: 45px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.login__question {
+		margin: 14px 7px 30px auto;
+		min-width: 145px;
+		min-height: 15px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.login__signin {
+		margin: 14px auto 30px 0;
+		min-width: 36px;
+		min-height: 15px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.login {
+		min-height: 1024px;
+	}
+
+	.login__header {
+		min-height: 379px;
+		max-width: 396px;
+	}
+
+	.login__welcome {
+		min-width: 396px;
+		margin: 0 auto 40px auto;
+	}
+
+	.login__welcome {
+		min-width: 396px;
+		margin: 0 auto 40px auto;
+	}
+
+	.login__form {
+		min-width: 396px;
+	}
+
+	.login__info {
+		min-width: 396px;
+	}
+
+	.login__text {
+		min-width: 396px;
+	}
+
+	.login__input {
+		min-width: 366px;
+	}
+
+	.login__password {
+		min-width: 366px;
+	}
+
+	.login__error {
+		min-width: 396px;
+	}
+
+	.login__button {
+		min-width: 396px;
+	}
+
+	.login__signup {
+		min-width: 396px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	.login__question {
+		margin: 16px 6px 232px auto;
+		min-width: 169px;
+		min-height: 17px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	.login__signin {
+		margin: 16px auto 232px 0;
+		min-width: 42px;
+		min-height: 17px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.login {
+		min-height: 700px;
+	}
+
+	.login__header {
+		min-height: 217px;
+	}
+
+	.login__question {
+		margin: 16px 6px 70px auto;
+	}
+
+	.login__signin {
+		margin: 16px auto 70px 0;
+	}
+}

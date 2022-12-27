@@ -1,0 +1,149 @@
+.portfolio {
+  background: #FFFFFF;
+  display: flex;
+}
+
+.portfolio__name {
+  color: #A0A0A0;
+  font-style: normal;
+  font-weight: 400;
+  mix-blend-mode: normal;
+}
+
+.portfolio__block {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.portfolio__link {
+  letter-spacing: -0.04em;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.portfolio__img {
+  background-image: url(../../../images/strelka.svg);
+}
+
+.portfolio__line {
+  background: #E6E6E6;
+  margin: 19px 0 0 0;
+}
+
+@media screen and (min-width: 320px) {
+  .portfolio {
+    max-width: 100vw;
+    min-height: 274px;
+    flex-direction: column;
+  }
+
+  .portfolio__name {
+    min-width: 88.75%;
+    min-height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 auto 20px auto;
+  }
+
+  .portfolio__list {
+    margin: 10px auto 0 auto;
+    min-width: 88.75%;
+    min-height: 154px;
+  }
+
+  .portfolio__block {
+    min-width: 292px;
+    min-height: 28px;
+    margin: 0 auto;
+  }
+
+  .portfolio__link {
+    min-width: 250px;
+    max-height: 28px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 10px 24px 0 0;
+  }
+
+  .portfolio__img {
+    width: 12px;
+    height: 11px;
+    margin: 18.5px 0 auto auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio {
+    min-height: 390px;
+  }
+
+  .portfolio__name {
+    min-height: 20px;
+    min-width: 250px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-left: 50px
+  }
+
+  .portfolio__list {
+    min-width: 668px;
+    min-height: 250px;
+    margin: 10px 50px 0 50px;
+  }
+
+  .portfolio__block {
+    min-height: 50px;
+    min-width: 668px;
+    margin: 0;
+  }
+
+  .portfolio__link {
+    min-width: 641px;
+    min-height: 50px;
+    font-size: 28px;
+    line-height: 50px;
+    margin: 20px auto 0 0;
+  }
+
+  .portfolio__img {
+    background-image: url(../../../images/strelka-768.svg);
+    width: 16px;
+    height: 16px;
+    margin: 37px 0 auto auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .portfolio {
+    min-height: 425px;
+  }
+
+  .portfolio__name {
+    margin-left: 70px;
+  }
+
+  .portfolio__list {
+    min-width: 1140px;
+    margin: 10px 70px 0 70px;
+  }
+
+  .portfolio__block {
+    min-width: 1140px;
+  }
+
+  .portfolio__link {
+    max-width: 880px;
+    min-height: 50px;
+    font-size: 30px;
+  }
+
+  .portfolio__img {
+    background-image: url(../../../images/strelka-1280.svg);
+    width: 18px;
+    height: 17px;
+    margin: 37px 0 auto auto;
+  }
+}

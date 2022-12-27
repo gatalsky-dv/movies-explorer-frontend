@@ -1,0 +1,140 @@
+.tech {
+  background: #F5F5F5;
+  display: flex;
+}
+
+.tech__caption {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tech__text {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tech__list {
+  display: grid;
+}
+
+.tech__block {
+  background-color: #E8E8E8;
+  border-radius: 10px;
+  display: flex;
+}
+
+.tech__title {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.04em;
+  margin: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .tech {
+    max-width: 100vw;
+    min-height: 641px;
+    flex-direction: column;
+  }
+
+  .tech__caption {
+    min-width: 88.75%;
+    min-height: 36px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    margin: 0 auto;
+  }
+
+  .tech__text {
+    max-width: 88.75%;
+    min-height: 32px;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    margin: 24px auto 50px auto;
+  }
+
+  .tech__list {
+    margin: 0 auto 70px auto;
+    gap: 10px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .tech__block {
+    min-width: 84px;
+    min-height: 57px;
+  }
+
+  .tech__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tech {
+    min-height: 585px;
+  }
+
+  .tech__caption {
+    max-width: 600px;
+    max-height: 58px;
+    margin-top: 10px;
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  .tech__text {
+    max-width: 460px;
+    max-height: 36px;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 22px auto 83px auto;
+  }
+
+  .tech__list {
+    margin-bottom: 90px;
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(7, auto);
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+  .tech {
+    min-height: 608px;
+  }
+
+  .tech__caption {
+    margin-top: 24px;
+  }
+
+  .tech__text {
+    max-height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 26px auto 100px auto;
+  }
+
+  .tech__list {
+    margin-bottom: 100px;
+  }
+
+  .tech__block {
+    min-width: 90px;
+    min-height: 60px;
+  }
+
+  .tech__title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
