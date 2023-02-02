@@ -59,7 +59,7 @@
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 16px;
-	color: #EE3465;
+	color: #000000;
 	margin: auto;
 	padding: 15px;
 	background: #F9F9F9;
@@ -179,7 +179,7 @@
 	}
 
 	.login__signup {
-		margin: 157px auto 14px auto;
+		margin: 179px auto 14px auto;
 		min-width: 260px;
 		min-height: 45px;
 		font-size: 12px;

@@ -10,15 +10,19 @@ export default function HeaderMovies() {
 		setClick(!click);
 	}
 	
+	function reload() {
+		if (window.location.pathname === "/movies") {
+			window.location.pathname.reload();
+		}
+	}
+	
 	return (
-		
 		<header className="headermovies">
-			
 			<div className="headermovies__movies">
 				<Link to="/" className="logo"></Link>
 				<div className="headermovies__links">
 					<Link to="/movies" className="headermovies__link">Фильмы</Link>
-					<Link to="/saved-movies" className="headermovies__link">Сохраненные фильмы</Link>
+					<Link to="/saved-movies" className="headermovies__link" onClick={reload}>Сохраненные фильмы</Link>
 				</div>
 			</div>
 			<button type="button" className="headermovies__burger" onClick={handleClick}></button>
@@ -31,6 +35,5 @@ export default function HeaderMovies() {
 			</div>
 			<Navigation isOpen={click} onClose={handleClick} />
 		</header>
-
 	)
 }
