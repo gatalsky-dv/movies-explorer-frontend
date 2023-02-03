@@ -12,7 +12,7 @@
 
 * Макет figma https://drive.google.com/drive/folders/1PVAasx9-rn3SjsmROLIhf2Z1OSoqT1dt?usp=sharing
 
-* IP: https://130.193.48.142
+* IP: https://158.160.43.192
 * Frontend: https://gatalsky.nomoredomains.club
 * Backend: https://api.gatalsky.nomoredomains.club
 
