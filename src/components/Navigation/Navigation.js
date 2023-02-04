@@ -9,6 +9,7 @@ export default function Navigation({ isOpen, onClose }) {
 			<button className="navigation__close" onClick={ onClose }></button>
 			<Link to="/" className="navigation__menu">Главная</Link>
 			<Link to="/movies" className="navigation__menu">Фильмы</Link>
+			// ребут добавить
 			<Link to="/saved-movies" className="navigation__menu">Сохраненные фильмы</Link>
 			<div className="navigation__account">
 				<h3 className="text">Аккаунт</h3>
