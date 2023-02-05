@@ -10,8 +10,8 @@ export default function SavedMovies({
 	                                    loggedIn,
 	                                    preloader,
 	                                    saveCards,
-	                                    cardsSwitch,
-	                                    setCardsSwitch,
+	                                    cardsSavedSwitch,
+	                                    setCardsSavedSwitch,
 	                                    cardInputSaved,
 	                                    setCardInputSaved,
 	                                    cardsArraySaved,
@@ -32,8 +32,8 @@ export default function SavedMovies({
 			/>
 			<SearchForm
 				cards={saveCards}
-				cardsSwitch={cardsSwitch}
-				setCardsSwitch={setCardsSwitch}
+				cardsSavedSwitch={cardsSavedSwitch}
+				setCardsSavedSwitch={setCardsSavedSwitch}
 				cardInput={cardInputSaved}
 				setCardInput={setCardInputSaved}
 				onMovieSearch={onSaveMovieSearch}
@@ -47,7 +47,7 @@ export default function SavedMovies({
 					cardsOutput={cardsOutput}
 					addCadsOutput={addCadsOutput}
 					setCardsOutput={setCardsOutput}
-					cardsSwitch={cardsSwitch}
+					cardsSavedSwitch={cardsSavedSwitch}
 					onCardLike={onCardLike}
 					onCardDelete={onCardDelete}
 					errorData={errorData}

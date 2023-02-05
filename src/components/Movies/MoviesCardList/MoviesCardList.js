@@ -6,6 +6,7 @@ import Preloader from "../../Preloader/Preloader";
 
 export default function MoviesCardList({
 	                                       cardsSwitch,
+	                                       cardsSavedSwitch,
 	                                       cardsArray,
 	                                       saveCards,
 	                                       cardsOutput,
@@ -18,8 +19,14 @@ export default function MoviesCardList({
                                        }) {
 	
 	const movieArrayList = cardsArray.filter((movie) => {
-		if (!cardsSwitch || (cardsSwitch && movie.duration <= SHORT_FILM)) {
-			return movie;
+		if (window.location.pathname === "/movies") {
+			if (!cardsSwitch || (cardsSwitch && movie.duration <= SHORT_FILM)) {
+				return movie;
+			}
+		} else {
+			if (!cardsSavedSwitch || (cardsSavedSwitch && movie.duration <= SHORT_FILM)) {
+				return movie;
+			}
 		}
 	});
 	

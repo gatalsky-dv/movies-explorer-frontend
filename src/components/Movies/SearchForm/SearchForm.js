@@ -5,6 +5,8 @@ export default function SearchForm({
 	                                   cards,
 	                                   setCardsSwitch,
 	                                   cardsSwitch,
+	                                   setCardsSavedSwitch,
+	                                   cardsSavedSwitch,
 	                                   onMovieSearch,
 	                                   cardInput,
 	                                   setCardInput,
@@ -31,8 +33,12 @@ export default function SearchForm({
 	}
 	
 	const handleClickCheck = () => {
-		setCardsSwitch(!cardsSwitch);
-		localStorage.setItem('cardsSwitch', JSON.stringify(!cardsSwitch));
+		if (window.location.pathname === "/movies") {
+			setCardsSwitch(!cardsSwitch);
+			localStorage.setItem('cardsSwitch', JSON.stringify(!cardsSwitch));
+		} else {
+			setCardsSavedSwitch(!cardsSavedSwitch);
+		}
 	}
 	
 	return (
@@ -55,7 +61,11 @@ export default function SearchForm({
 			</form>
 			<div className="line line_search"></div>
 			<div className="search__check">
-					<img src={cardsSwitch ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/>
+				{ window.location.pathname === "/movies" ?
+					<img src={cardsSwitch ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/> :
+					<img src={cardsSavedSwitch ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/>
+				}
+					
 					<label className="search__title">Короткометражки</label>
 			</div>
 		</section>

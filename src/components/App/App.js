@@ -43,6 +43,7 @@ export default function App() {
 	const [cardInput, setCardInput] = useState('');
 	const [cardInputSaved, setCardInputSaved] = useState('');
 	const [cardsSwitch, setCardsSwitch] = useState('');
+	const [cardsSavedSwitch, setCardsSavedSwitch] = useState('');
 	const [currentUser, setCurrentUser] = useState({});
 	const [preloader, setPreloader] = useState(false);
 	const [errorData, setErrorData] = useState(false);
@@ -310,8 +311,8 @@ export default function App() {
 					    loggedIn={loggedIn}
 					    preloader={preloader}
 					    saveCards={saveCards}
-					    cardsSwitch={cardsSwitch}
-					    setCardsSwitch={setCardsSwitch}
+					    cardsSavedSwitch={cardsSavedSwitch}
+					    setCardsSavedSwitch={setCardsSavedSwitch}
 					    cardInputSaved={cardInputSaved}
 					    setCardInputSaved={setCardInputSaved}
 					    cardsArraySaved={cardsArraySaved}
