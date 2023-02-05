@@ -334,6 +334,7 @@ export default function App() {
 			        onSignOut={handleSignOut}
 			        preloader={preloader}
 			        errorData={errorData}
+			        loggedIn={loggedIn}
 		        />
 			      )}
 		      />
