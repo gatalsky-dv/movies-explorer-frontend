@@ -29,6 +29,8 @@ import {
 	WIDTH480,
 	ERROR_REGISTER_TEXT,
 	ERROR_LOGIN_TEXT,
+	ERROR_UPDATE_USER,
+	SUCCESS,
 } from "../../utils/constants";
 
 export default function App() {
@@ -48,6 +50,7 @@ export default function App() {
 	const [preloader, setPreloader] = useState(false);
 	const [errorData, setErrorData] = useState(false);
 	const [cardsOutput, setCardsOutput] = useState(cardsOutputList());
+	const [profileEditedSuccess, setProfileEditedSuccess] = useState('');
 	const addCadsOutput = addCardsOutputList();
 	
 	useEffect(() => {
@@ -145,11 +148,13 @@ export default function App() {
 		MainApi.editProfile(name, email)
 			.then((res) => {
 				setCurrentUser(res);
+				setProfileEditedSuccess(true);
 				// navigate('/movies');
 			})
 			.catch((err) => {
 				setErrorData(true);
-				console.log(err, ERROR_REGISTER_TEXT);
+				setProfileEditedSuccess(false);
+				console.log(err, ERROR_UPDATE_USER);
 			})
 			.finally(() => {
 				setPreloader(false);
@@ -326,6 +331,7 @@ export default function App() {
 			        onSignOut={handleSignOut}
 			        preloader={preloader}
 			        errorData={errorData}
+			        profileEditedSuccess={profileEditedSuccess}
 			        loggedIn={loggedIn}
 		        /> }
 		      />

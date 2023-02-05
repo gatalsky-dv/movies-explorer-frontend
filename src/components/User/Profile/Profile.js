@@ -3,29 +3,22 @@ import {Link} from 'react-router-dom';
 import { Validation } from "../../../utils/Validation";
 import CurrentUserContext from "../../../contexts/CurrentUserContext";
 import Preloader from "../../Preloader/Preloader";
-import { SUCCESS } from "../../../utils/constants";
+import { SUCCESS, ERROR_UPDATE_USER } from "../../../utils/constants";
 import HeaderMovies from "../../HeaderMovies/HeaderMovies";
 
-export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn }) {
+export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn, errorData, profileEditedSuccess }) {
 	const currentUser = useContext(CurrentUserContext);
 	const { values, handleChange } = Validation();
-	const [inputDisabled] = useState(false);
-	const [userUpdate, setUserUpdate] = useState(false);
 	
 	function handleSubmit(e) {
 		e.preventDefault();
-		onUpdateUser(values.name ? values.name : currentUser.name, values.email ? values.email : currentUser.email);
-		setTimeout(()=>{
-			setUserUpdate(false);
-		}, 4000);
-		setUserUpdate(true);
-	};
-	
-	// setTimeout(()=>{
-	// 	setInputValid(true);
-	// }, 4000);
-	
-
+		if (values.name !== currentUser.name & values.name !== undefined || values.email !== currentUser.email & values.email !== undefined) {
+			onUpdateUser(values.name ? values.name : currentUser.name, values.email ? values.email : currentUser.email);
+			// setTimeout(()=>{
+			// 	setErrorData(false);
+			// }, 4000);
+		}
+	}
 	
 	return (
 		<>
@@ -35,7 +28,10 @@ export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn }
 			<section className="profile">
 				{preloader && <Preloader />}
 				<h1 className="profile__greeting">Привет, {currentUser.name}</h1>
-				{userUpdate &&
+				{errorData &&
+					<p className="moviescardlist__text">{ERROR_UPDATE_USER}</p>
+				}
+				{profileEditedSuccess &&
 					<p className="moviescardlist__text">{SUCCESS}</p>
 				}
 				<form className="profile__form" onSubmit={handleSubmit}>
@@ -51,7 +47,7 @@ export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn }
 							minLength="2"
 							maxLength="40"
 							pattern="[A-Za-zА-Яа-я\s]{1,20}$"
-							disabled={ inputDisabled && "disabled" }
+							// disabled={ inputDisabled && "disabled" }
 							onChange={ handleChange }
 							defaultValue={currentUser.name}
 						/>
@@ -69,7 +65,7 @@ export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn }
 							minLength="2"
 							maxLength="40"
 							pattern="[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,20}$"
-							disabled={ inputDisabled && "disabled" }
+							// disabled={ inputDisabled && "disabled" }
 							onChange={ handleChange }
 							defaultValue={currentUser.email}
 						/>
