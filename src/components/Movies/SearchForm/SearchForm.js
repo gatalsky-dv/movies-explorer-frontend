@@ -65,7 +65,6 @@ export default function SearchForm({
 					<img src={cardsSwitch ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/> :
 					<img src={cardsSavedSwitch ? require('../../../images/smalltumb.svg') : require('../../../images/smalltumboff.svg')} onClick={handleClickCheck} alt="Переключатель" className="search__checkbox"/>
 				}
-					
 					<label className="search__title">Короткометражки</label>
 			</div>
 		</section>

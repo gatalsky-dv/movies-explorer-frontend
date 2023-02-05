@@ -100,7 +100,7 @@ export default function App() {
 			});
 	}, []);
 	
-	const handleLogin = async ({email, password}) => {
+	const handleLogin = async ({ email, password }) => {
 		setPreloader(true);
 		setErrorData(false);
 		return MainApi
@@ -108,8 +108,8 @@ export default function App() {
 			.then((data) => {
 				if (data.token) {
 					setLoggedIn(true);
-					navigate('/movies');
 					localStorage.setItem('token', data.token);
+					navigate('/movies');
 				}
 			})
 			.catch((err) => {
@@ -128,10 +128,7 @@ export default function App() {
 		return MainApi
 			.register(name, email, password)
 			.then((res) => {
-				if (email === res.email) {
-					handleLogin(email, password);
-					navigate('/movies');
-				}
+					handleLogin({email, password});
 			})
 			.catch((err) => {
 				setErrorData(true);
