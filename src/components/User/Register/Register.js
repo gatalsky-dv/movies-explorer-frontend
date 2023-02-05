@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Preloader from "../../Preloader/Preloader";
 import { Validation } from "../../../utils/Validation";
+import {ERROR_REGISTER_TEXT} from "../../../utils/constants";
 
-export default function Register({ onRegister, preloader, text }) {
+export default function Register({ onRegister, preloader, text, errorData }) {
 	const { values, handleChange, errors, isValid } = Validation();
 	const [inputDisabled, setInputDisabled] = useState(false);
 	
@@ -20,6 +21,9 @@ export default function Register({ onRegister, preloader, text }) {
 				<Link to="/" className="logo logo_login"></Link>
 				<h1 className="register__welcome">Добро пожаловать!</h1>
 			</header>
+			{errorData &&
+				<p className="moviescardlist__text">{ERROR_REGISTER_TEXT}</p>
+			}
 			<form className="register__form" onSubmit={handleSubmit}>
 				<div className="register__info">
 					<label className="register__text">Имя</label>
@@ -66,7 +70,7 @@ export default function Register({ onRegister, preloader, text }) {
 						disabled={ inputDisabled && "disabled" }
 						onChange={ handleChange }
 					/>
-					<label className={`register__error ${!errors ? '' : 'rigister__error_active'}`}>{text}</label>
+					<label className={`register__error ${!errors ? '' : 'rigister__error_active'}`}>{ERROR_REGISTER_TEXT}</label>
 				</div>
 				
 				<div className="register__button">

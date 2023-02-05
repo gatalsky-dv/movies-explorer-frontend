@@ -30,7 +30,6 @@ import {
 	ERROR_REGISTER_TEXT,
 	ERROR_LOGIN_TEXT,
 	ERROR_UPDATE_USER,
-	SUCCESS,
 } from "../../utils/constants";
 
 export default function App() {

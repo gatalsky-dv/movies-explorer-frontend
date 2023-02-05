@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import {ERROR_LOGIN_TEXT} from "../../../utils/constants";
 
 export default function Login({ onLogin }) {
 	
@@ -27,6 +28,9 @@ export default function Login({ onLogin }) {
 				<Link to="/" className="logo logo_login"></Link>
 				<h1 className="login__welcome">Рады видеть!</h1>
 			</header>
+			{errorData &&
+				<p className="moviescardlist__text">{ERROR_LOGIN_TEXT}</p>
+			}
 			<form className="login__form"  onSubmit={handleSubmit}>
 				<div className="login__info">
 					<label className="login__text">E-mail</label>
