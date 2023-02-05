@@ -321,17 +321,13 @@ export default function App() {
 				    /> }
 			    />
 		      <Route path="/profile" element={
-			      !loggedIn ? (
-				      <Navigate to='/' />
-			      ) : (
 						<Profile
 			        onUpdateUser={handleUpdateUser}
 			        onSignOut={handleSignOut}
 			        preloader={preloader}
 			        errorData={errorData}
 			        loggedIn={loggedIn}
-		        />
-			      )}
+		        /> }
 		      />
 		      <Route path="/signin" element={
 			      loggedIn ? (
