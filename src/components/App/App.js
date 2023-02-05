@@ -204,9 +204,6 @@ export default function App() {
 		localStorage.removeItem('cardsArray');
 		navigate('/');
 		setLoggedIn(false);
-		if (window.location.pathname === "/") {
-			window.location.pathname.reload();
-		}
 	}
 	
 	const authentication = async (token) => {

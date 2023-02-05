@@ -12,7 +12,6 @@ export default function Header({ loggedIn }) {
   return (
 
     <header className="header">
-      
       {!loggedIn ? (
         <>
           <Link to="/" className="logo"></Link>
@@ -31,7 +30,6 @@ export default function Header({ loggedIn }) {
         </div>
         <button type="button" className="headermovies__burger headermovies__burger_login" onClick={handleClick}></button>
         <div className="headermovies__account">
-  
           <h3 className="text text_login">Аккаунт</h3>
           <div className="button">
           <Link to="/profile" className="link"></Link>
