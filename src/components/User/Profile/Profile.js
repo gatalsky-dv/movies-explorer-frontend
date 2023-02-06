@@ -3,38 +3,40 @@ import {Link} from 'react-router-dom';
 import { Validation } from "../../../utils/Validation";
 import CurrentUserContext from "../../../contexts/CurrentUserContext";
 import Preloader from "../../Preloader/Preloader";
-import { SUCCESS } from "../../../utils/constants";
+import {ERROR_PROFILE_EMAIL, SUCCESS} from "../../../utils/constants";
 import HeaderMovies from "../../HeaderMovies/HeaderMovies";
 
-export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn }) {
+export default function Profile({ onUpdateUser, onSignOut, preloader, loggedIn, errorData }) {
 	const currentUser = useContext(CurrentUserContext);
-	const { values, handleChange } = Validation();
+	const { values, handleChange, errors, isValid } = Validation();
 	const [inputDisabled] = useState(false);
 	const [userUpdate, setUserUpdate] = useState(false);
 	
 	function handleSubmit(e) {
 		e.preventDefault();
-		onUpdateUser(values.name ? values.name : currentUser.name, values.email ? values.email : currentUser.email);
-		setTimeout(()=>{
-			setUserUpdate(false);
-		}, 4000);
-		setUserUpdate(true);
+		if (values.name !== currentUser.name && values.name !== undefined && values.name !== '' || values.email !== currentUser.email && values.email !== undefined && values.email !== '') {
+			onUpdateUser(values.name ? values.name : currentUser.name, values.email ? values.email : currentUser.email);
+			
+			// onUpdateUser(values.name ? values.name : currentUser.name, values.email ? values.email : currentUser.email);
+			setTimeout(() => {
+				setUserUpdate(false);
+			}, 4000);
+			setUserUpdate(true);
+		}
 	};
-	
-	// setTimeout(()=>{
-	// 	setInputValid(true);
-	// }, 4000);
 	
 	return (
 		<>
 			<HeaderMovies
-				// loggedIn={ loggedIn }
 			/>
 			<section className="profile">
 				{preloader && <Preloader />}
 				<h1 className="profile__greeting">Привет, {currentUser.name}</h1>
-				{userUpdate &&
-					<p className="moviescardlist__text">{SUCCESS}</p>
+				
+				{errorData ?
+					<p className="moviescardlist__text">{ERROR_PROFILE_EMAIL}</p>
+					: userUpdate ?
+					<p className="moviescardlist__text">{SUCCESS}</p> : ''
 				}
 				<form className="profile__form" onSubmit={handleSubmit}>
 					<div className="profile__info">

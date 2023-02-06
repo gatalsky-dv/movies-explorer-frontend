@@ -4,7 +4,7 @@ import Preloader from "../../Preloader/Preloader";
 import { Validation } from "../../../utils/Validation";
 import {ERROR_REGISTER_TEXT} from "../../../utils/constants";
 
-export default function Register({ onRegister, preloader, text, errorData }) {
+export default function Register({ onRegister, preloader, errorData }) {
 	const { values, handleChange, errors, isValid } = Validation();
 	const [inputDisabled, setInputDisabled] = useState(false);
 	

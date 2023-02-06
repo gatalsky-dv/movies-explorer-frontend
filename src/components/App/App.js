@@ -61,25 +61,28 @@ export default function App() {
 	
 	useEffect(() => {
 		const token = localStorage.getItem('token');
-		console.log('Делай РАЗ: ПОЛУЧИЛИ токен ', token);
 		setLoggedIn(false);
 		if (token) {
 			setLoggedIn(true);
 			authentication(token);
-			console.log('Делай ДВА: ', loggedIn);
 		}
 	}, [loggedIn]);
 	
 	useEffect(() => {
+		if (errorData) {
+			setTimeout(()=>{
+				setErrorData(false);
+			}, 5000);
+		}
+	})
+	
+	
+	useEffect(() => {
 		setErrorData(false);
-		console.log('ЭФФЕКТ НА АВТОРИЗАЦИЮ', localStorage.getItem('token'));
-		console.log('Делай ТРИ: ', loggedIn);
 		if (loggedIn && localStorage.getItem('token')) {
-			console.log('прошли эту залупу: ', loggedIn);
 			MainApi
 				.getUserInfo()
 				.then((res) => {
-					console.log('ТОЧНО ПРОШЛИ: ', res);
 					setCurrentUser(res);
 				})
 				.catch((err) => {

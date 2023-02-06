@@ -6,6 +6,7 @@ export const SUCCESS = 'УСПЕХ!';
 export const INPUT_MOVIE = 'Нужно ввести ключевое слово';
 export const DATA_ERROR = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
 export const ERROR_LOGIN_TEXT = 'Неправильный email или пароль';
+export const ERROR_PROFILE_EMAIL = 'Такой email уже существует';
 export const ERROR_REGISTER_TEXT = 'Что-то пошло не так! Попробуйте ещё раз.';
 export const NOTHING_FOUND = 'Ничего не найдено';
 export const WIDTH1280 = 1279;

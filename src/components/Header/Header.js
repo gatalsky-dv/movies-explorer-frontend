@@ -9,8 +9,6 @@ export default function Header({ loggedIn }) {
   function handleClick() {
     setClick(!click);
   }
-  console.log('ПРИШЛИ В ХЭДЭР: ', loggedIn);
-  
   return (
 
     <header className="header">
