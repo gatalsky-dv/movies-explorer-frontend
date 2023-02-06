@@ -35,7 +35,8 @@ export const authorize = (email, password) => {
 		.then(res => сheckResponseData(res));
 };
 
-export const getUserInfo = async  (token) => {
+export const getUserInfo = async (token) => {
+	console.log('ТОКЕН АПИ: ', token);
 	return fetch(`${BASE_URL}/users/me`, {
 		method: 'GET',
 		headers: {

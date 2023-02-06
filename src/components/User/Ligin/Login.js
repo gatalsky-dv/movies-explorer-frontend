@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import {ERROR_LOGIN_TEXT} from "../../../utils/constants";
 
-export default function Login({ onLogin }) {
+export default function Login({ onLogin, errorData }) {
 	
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');

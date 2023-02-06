@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import '../../index.css';
 import './App.css';
 import Header from '../Header/Header';
@@ -29,13 +31,13 @@ import {
 	WIDTH480,
 	ERROR_REGISTER_TEXT,
 	ERROR_LOGIN_TEXT,
-	ERROR_UPDATE_USER,
+	// ERROR_UPDATE_USER,
 } from "../../utils/constants";
 
 export default function App() {
 	
 	const navigate = useNavigate();
-	const [loggedIn, setLoggedIn] = useState(false);
+	const [loggedIn, setLoggedIn] = useState(true);
 	const [cards, setCards] = useState([]);
 	const [saveCards, setSaveCards] = useState([]);
 	const [cardsArray, setCardsArray] = useState([]);
@@ -49,7 +51,6 @@ export default function App() {
 	const [preloader, setPreloader] = useState(false);
 	const [errorData, setErrorData] = useState(false);
 	const [cardsOutput, setCardsOutput] = useState(cardsOutputList());
-	const [profileEditedSuccess, setProfileEditedSuccess] = useState('');
 	const addCadsOutput = addCardsOutputList();
 	
 	useEffect(() => {
@@ -60,17 +61,25 @@ export default function App() {
 	
 	useEffect(() => {
 		const token = localStorage.getItem('token');
+		console.log('Делай РАЗ: ПОЛУЧИЛИ токен ', token);
+		setLoggedIn(false);
 		if (token) {
+			setLoggedIn(true);
 			authentication(token);
+			console.log('Делай ДВА: ', loggedIn);
 		}
 	}, [loggedIn]);
 	
 	useEffect(() => {
 		setErrorData(false);
-		if (loggedIn) {
+		console.log('ЭФФЕКТ НА АВТОРИЗАЦИЮ', localStorage.getItem('token'));
+		console.log('Делай ТРИ: ', loggedIn);
+		if (loggedIn && localStorage.getItem('token')) {
+			console.log('прошли эту залупу: ', loggedIn);
 			MainApi
 				.getUserInfo()
 				.then((res) => {
+					console.log('ТОЧНО ПРОШЛИ: ', res);
 					setCurrentUser(res);
 				})
 				.catch((err) => {
@@ -109,8 +118,8 @@ export default function App() {
 			.authorize(email, password)
 			.then((data) => {
 				if (data.token) {
-					setLoggedIn(true);
 					localStorage.setItem('token', data.token);
+					setLoggedIn(true);
 					navigate('/movies');
 				}
 			})
@@ -147,13 +156,11 @@ export default function App() {
 		MainApi.editProfile(name, email)
 			.then((res) => {
 				setCurrentUser(res);
-				setProfileEditedSuccess(true);
 				// navigate('/movies');
 			})
 			.catch((err) => {
 				setErrorData(true);
-				setProfileEditedSuccess(false);
-				console.log(err, ERROR_UPDATE_USER);
+				console.log(err, ERROR_REGISTER_TEXT);
 			})
 			.finally(() => {
 				setPreloader(false);
@@ -220,6 +227,7 @@ export default function App() {
 				}
 			})
 			.catch((err) => {
+				setLoggedIn(false);
 				setErrorData(true);
 				console.log(err);
 			});
@@ -284,6 +292,7 @@ export default function App() {
 	          </>
 	        } />
 	        <Route path="/movies" element={
+		        <ProtectedRoute loggedIn={loggedIn} path="/movies">
 						<Movies
 							loggedIn={loggedIn}
 							preloader={preloader}
@@ -302,9 +311,13 @@ export default function App() {
 							onCardLike={handleCardLike}
 							onCardDelete={handleCardDelete}
 							errorData={errorData}
-						/> }
+						/>
+		        </ProtectedRoute>
+					}
 	        />
 			    <Route path="/saved-movies" element={
+				    <ProtectedRoute
+					    loggedIn={loggedIn} >
 				    <SavedMovies
 					    loggedIn={loggedIn}
 					    preloader={preloader}
@@ -322,17 +335,23 @@ export default function App() {
 					    onCardDelete={handleCardDelete}
 					    errorData={errorData}
 					    saveCardsVisible={saveCardsVisible}
-				    /> }
+				    />
+				    </ProtectedRoute>
+					}
 			    />
 		      <Route path="/profile" element={
-						<Profile
-			        onUpdateUser={handleUpdateUser}
-			        onSignOut={handleSignOut}
-			        preloader={preloader}
-			        errorData={errorData}
-			        profileEditedSuccess={profileEditedSuccess}
-			        loggedIn={loggedIn}
-		        /> }
+			      <ProtectedRoute
+				      loggedIn={loggedIn} >
+				      <Profile
+					      onUpdateUser={handleUpdateUser}
+					      onSignOut={handleSignOut}
+					      preloader={preloader}
+					      errorData={errorData}
+					      loggedIn={loggedIn}
+				      />
+						</ProtectedRoute>
+						}
+
 		      />
 		      <Route path="/signin" element={
 			      loggedIn ? (
@@ -351,7 +370,7 @@ export default function App() {
 			      ) : (
 				      <Register
 					      onRegister={handleRegister}
-					      preloader= {preloader}
+					      preloader={preloader}
 					      errorData={errorData}
 				      />
 			      )

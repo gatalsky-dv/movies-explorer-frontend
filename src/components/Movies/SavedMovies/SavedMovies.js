@@ -28,7 +28,7 @@ export default function SavedMovies({
 	return (
 		<main className="main">
 			<HeaderMovies
-				loggedIn={ loggedIn }
+				// loggedIn={ loggedIn }
 			/>
 			<SearchForm
 				cards={saveCards}

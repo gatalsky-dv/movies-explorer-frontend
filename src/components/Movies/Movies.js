@@ -28,7 +28,7 @@ export default function Movies({
 	return (
 		<main className="main">
 			<HeaderMovies
-				loggedIn={ loggedIn }
+				// loggedIn={ loggedIn }
 			/>
 			<SearchForm
 				cards={cards}

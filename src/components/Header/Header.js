@@ -9,16 +9,18 @@ export default function Header({ loggedIn }) {
   function handleClick() {
     setClick(!click);
   }
+  console.log('ПРИШЛИ В ХЭДЭР: ', loggedIn);
+  
   return (
 
     <header className="header">
       {!loggedIn ? (
         <>
           <Link to="/" className="logo"></Link>
-      <div className="header__profile">
-        <Link to="/signup" className="header__registration">Регистрация</Link>
-        <Link to="/signin" className="header__login">Войти</Link>
-      </div>
+          <div className="header__profile">
+            <Link to="/signup" className="header__registration">Регистрация</Link>
+            <Link to="/signin" className="header__login">Войти</Link>
+          </div>
         </>) : (
         <>
         <div className="headermovies__movies">
