@@ -33,6 +33,7 @@ import {
 	ERROR_LOGIN_TEXT,
 	// ERROR_UPDATE_USER,
 } from "../../utils/constants";
+import {getCards} from "../../utils/MainApi";
 
 export default function App() {
 	
@@ -46,7 +47,7 @@ export default function App() {
 	const [cardInput, setCardInput] = useState('');
 	const [cardInputSaved, setCardInputSaved] = useState('');
 	const [cardsSwitch, setCardsSwitch] = useState('');
-	const [cardsSavedSwitch, setCardsSavedSwitch] = useState('');
+	const [cardsSavedSwitch, setCardsSavedSwitch] = useState(false);
 	const [currentUser, setCurrentUser] = useState({});
 	const [preloader, setPreloader] = useState(false);
 	const [errorData, setErrorData] = useState(false);
@@ -57,6 +58,7 @@ export default function App() {
 		setCardsArray(JSON.parse(localStorage.getItem('cardsArray')));
 		setCardInput(JSON.parse(localStorage.getItem('cardInput')));
 		setCardsSwitch(JSON.parse(localStorage.getItem('cardsSwitch')));
+		setSaveCardsVisible(false);
 	}, []);
 	
 	useEffect(() => {
@@ -76,7 +78,6 @@ export default function App() {
 		}
 	})
 	
-	
 	useEffect(() => {
 		setErrorData(false);
 		if (loggedIn && localStorage.getItem('token')) {
@@ -89,17 +90,21 @@ export default function App() {
 					console.log(err, ERROR_LOGIN_TEXT);
 					setErrorData(true);
 				});
-			MainApi
-				.getCards()
-				.then((res) => {
-					setSaveCards(res);
-				})
-				.catch((err) => {
-					console.log(err);
-					setErrorData(true);
-				});
 		}
 	}, [loggedIn]);
+	
+	useEffect(() => {
+		setErrorData(false);
+		MainApi
+			.getCards()
+			.then((res) => {
+				setSaveCards(res);
+			})
+			.catch((err) => {
+				console.log(err);
+				setErrorData(true);
+			});
+	}, []);
 	
 	useEffect(() => {
 		setErrorData(false);
@@ -169,23 +174,23 @@ export default function App() {
 				setPreloader(false);
 			})
 	};
-
-	const handleCardLike = async (data) => {
-		setPreloader(true);
-		setErrorData(false);
-		MainApi
-			.postCards(data)
-			.then((res) => {
-				setSaveCards([...saveCards, res]);
-			})
-			.catch((err) => {
-				setErrorData(true);
-				console.log(err);
-			})
-			.finally(() => {
-				setPreloader(false);
-			});
-	};
+	
+		const handleCardLike = async (data) => {
+			setPreloader(true);
+			setErrorData(false);
+			MainApi
+				.postCards(data)
+				.then((res) => {
+					setSaveCards([...saveCards, res.data]);
+				})
+				.catch((err) => {
+					setErrorData(true);
+					console.log(err);
+				})
+				.finally(() => {
+					setPreloader(false);
+				});
+		};
 	
 	const handleCardDelete = async (movieId) => {
 		setPreloader(true);
@@ -193,8 +198,8 @@ export default function App() {
 		MainApi
 			.deleteCard(movieId)
 			.then(() => {
-				setSaveCards(saveCards.filter(card => card._id !== movieId._id));
-				setCardsArraySaved(saveCards.filter(card => card._id !== movieId._id));
+				setSaveCards(saveCards.filter(card => card !== movieId));
+				setCardsArraySaved(saveCards.filter(card => card !== movieId));
 			})
 			.catch((err) => {
 				setErrorData(true);

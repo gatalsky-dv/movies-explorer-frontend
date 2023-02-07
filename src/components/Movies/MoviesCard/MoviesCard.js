@@ -20,7 +20,7 @@ export default function MoviesCard({
 				setSave(true);
 			}
 		});
-	}, [saveCards]);
+	}, []);
 
 	function handleClick() {
 		if (!save) {
@@ -52,7 +52,7 @@ export default function MoviesCard({
 						type="button"
 						className={`card__save ${save === true ? cardButton : ""}`}
 						onClick={handleClick}
-						disabled={save}
+						// disabled={save}
 					>
 						{save === false ? "Сохранить" : "" }
 					</button>

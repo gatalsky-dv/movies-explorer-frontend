@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {DATA_ERROR, INPUT_MOVIE} from "../../../utils/constants";
 
 export default function SearchForm({
@@ -13,7 +13,6 @@ export default function SearchForm({
                                    }) {
 
 	const [inputValid, setInputValid] = useState(true);
-	
 	
 	const handleClickSearch = (e) => {
 		e.preventDefault();

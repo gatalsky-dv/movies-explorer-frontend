@@ -69,7 +69,7 @@ export const getCards = () => {
 			'Content-Type': 'application/json',
 		},
 	})
-		.then(res => сheckResponseData(res));
+		.then(res => сheckResponseData(res))
 }
 
 export const postCards = (data) => {

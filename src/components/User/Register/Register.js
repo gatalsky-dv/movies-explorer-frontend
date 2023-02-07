@@ -11,7 +11,7 @@ export default function Register({ onRegister, preloader, errorData }) {
 	function handleSubmit(e) {
 		e.preventDefault();
 		onRegister(values.name, values.email, values.password);
-	};
+	}
 
 	return (
 		
