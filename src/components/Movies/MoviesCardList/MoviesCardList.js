@@ -30,8 +30,6 @@ export default function MoviesCardList({
 		}
 	});
 	
-	console.log('Что тут? ', cardsOutput);
-	
 	return (
 		<>
 			{movieArrayList.length === 0 &&

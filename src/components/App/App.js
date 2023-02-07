@@ -31,9 +31,7 @@ import {
 	WIDTH480,
 	ERROR_REGISTER_TEXT,
 	ERROR_LOGIN_TEXT,
-	// ERROR_UPDATE_USER,
 } from "../../utils/constants";
-import {getCards} from "../../utils/MainApi";
 
 export default function App() {
 	
@@ -53,13 +51,6 @@ export default function App() {
 	const [errorData, setErrorData] = useState(false);
 	const [cardsOutput, setCardsOutput] = useState(cardsOutputList());
 	const addCadsOutput = addCardsOutputList();
-	
-	useEffect(() => {
-		setCardsArray(JSON.parse(localStorage.getItem('cardsArray')));
-		setCardInput(JSON.parse(localStorage.getItem('cardInput')));
-		setCardsSwitch(JSON.parse(localStorage.getItem('cardsSwitch')));
-		setSaveCardsVisible(false);
-	}, []);
 	
 	useEffect(() => {
 		const token = localStorage.getItem('token');
@@ -95,16 +86,18 @@ export default function App() {
 	
 	useEffect(() => {
 		setErrorData(false);
-		MainApi
-			.getCards()
-			.then((res) => {
-				setSaveCards(res);
-			})
-			.catch((err) => {
-				console.log(err);
-				setErrorData(true);
-			});
-	}, []);
+		if (loggedIn && localStorage.getItem('token')) {
+			MainApi
+				.getCards()
+				.then((res) => {
+					setSaveCards(res);
+				})
+				.catch((err) => {
+					console.log(err);
+					setErrorData(true);
+				});
+		}
+	}, [loggedIn]);
 	
 	useEffect(() => {
 		setErrorData(false);
@@ -223,6 +216,10 @@ export default function App() {
 		localStorage.removeItem('cardsArray');
 		navigate('/');
 		setLoggedIn(false);
+		setCardsArray([]);
+		setCardInput([]);
+		setCardsSwitch('');
+		setSaveCards([]);
 	}
 	
 	const authentication = async (token) => {
