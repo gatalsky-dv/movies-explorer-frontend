@@ -30,6 +30,8 @@ export default function MoviesCardList({
 		}
 	});
 	
+	console.log('Что тут? ', cardsOutput);
+	
 	return (
 		<>
 			{movieArrayList.length === 0 &&
@@ -55,7 +57,7 @@ export default function MoviesCardList({
 					)
 				})}
 			</section>
-			{movieArrayList.length >= cardsOutput &&
+			{movieArrayList.length > cardsOutput &&
 				<MoreButton
 					cardsOutput={cardsOutput}
 					addCadsOutput={addCadsOutput}

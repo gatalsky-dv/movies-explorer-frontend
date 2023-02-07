@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import {DATA_ERROR, INPUT_MOVIE} from "../../../utils/constants";
 
 export default function SearchForm({
