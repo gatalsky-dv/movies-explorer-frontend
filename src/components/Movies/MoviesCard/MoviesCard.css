@@ -56,7 +56,6 @@
 }
 
 .card__time {
-	/*color: #000000;*/
 	margin: auto 0;
 	font-style: normal;
 	font-weight: 400;
@@ -76,8 +75,8 @@
 	}
 
 	.card__img {
-		max-width: 300px;
-		min-height: 168px;
+		width: 300px;
+		height: 168px;
 	}
 
 	.card__save {
@@ -112,7 +111,7 @@
 	.card__name {
 		font-size: 12px;
 		line-height: 15px;
-		min-width: 240px;
+		max-width: 240px;
 		min-height: 18px;
 	}
 
@@ -131,8 +130,8 @@
 	}
 
 	.card__img {
-		max-width: 339px;
-		min-height: 190px;
+		width: 339px;
+		height: 190px;
 	}
 
 	.card__save {
@@ -157,7 +156,7 @@
 	.card__name {
 		font-size: 13px;
 		line-height: 16px;
-		min-width: 250px;
+		max-width: 250px;
 	}
 
 	.card__time {
@@ -172,12 +171,12 @@
 	}
 
 	.card__img {
-		max-width: 360px;
-		min-height: 201px;
+		width: 360px;
+		height: 201px;
 	}
 
 	.card__description {
-		max-width: 360px;
+		max-width: 332px;
 	}
 
 	.card__name {

@@ -18,12 +18,6 @@
 	font-weight: 500;
 }
 
-.register__welcome {
-	color: #000000;
-	font-style: normal;
-	font-weight: 500;
-}
-
 .register__form {
 	margin: auto;
 	display: flex;
@@ -77,6 +71,11 @@
 	line-height: 12px;
 	color: #EE3465;
 	padding: 0;
+	display: none;
+}
+
+.rigister__error_active {
+	display: flex;
 }
 
 .register__button {
@@ -266,6 +265,7 @@
 		min-width: 396px;
 		font-size: 14px;
 		line-height: 17px;
+		margin-top: 69px;
 	}
 
 	.register__question {

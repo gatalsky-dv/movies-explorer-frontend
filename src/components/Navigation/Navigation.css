@@ -53,6 +53,10 @@
 	line-height: 16px;
 }
 
+.text_login {
+	color: #ffffff;
+}
+
 .button {
 	background: #F9F9F9;
 	border-radius: 6px;

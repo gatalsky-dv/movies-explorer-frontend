@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export default function Navigation({ isOpen, onClose }) {
 	
 	return (
-		
 		<nav className={`navigation ${isOpen ? "navigation_open" : ""}`} onClick={ onClose }>
 			<button className="navigation__close" onClick={ onClose }></button>
 			<Link to="/" className="navigation__menu">Главная</Link>
@@ -16,8 +15,6 @@ export default function Navigation({ isOpen, onClose }) {
 					<Link to="/profile" className="link"></Link>
 				</div>
 			</div>
-			
 		</nav>
-	
 	)
 }
